@@ -26,8 +26,8 @@ They are looking for a management system to keep track of their animals and owne
 - Set up tables for db [DONE]
 
 # Phase 1:
-- Owner Class model
-- Animal Class model
+- Owner Class model [DONE]
+- Animal Class model [DONE]
 - CRUDE for Owner class
 - CRUDE for Animal class
 
