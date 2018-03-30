@@ -7,11 +7,42 @@ class Owner
 
   def initialize(options)
     @name = options['name']
-    @id = options['id']
+    @id = options['id'].to_i
   end
 
-  def save
-    sql = "INSERT INTO owners (name) = "
+  def save()
+    sql = "INSERT INTO owners (name) VALUES ($1) RETURNING id;"
+    values = [@name]
+    result = SqlRunner.run(sql,values)
+    @id = result.first()['id'].to_i
+  end
+
+  def update()
+    
+  end
+
+  def self.delete_by_id(id)
+    sql = "DELETE * FROM owners WHERE id=$1"
+    values = [id]
+    SqlRunner.run(sql,values)
+  end
+
+  def self.all()
+    sql = "SELECT * FROM owners"
+    result = SqlRunner.run(sql)
+    return result.map{|x| Owner.new(x)}
+  end
+
+  def self.find_by_id(id)
+    sql = 'SELECT * FROM owners WHERE id=$1'
+    values = [id]
+    result = SqlRunner.run(sql)
+    return Owner.new(result.first)
+  end
+
+  def self.delete_all()
+    sql = 'DELETE * FROM owners'
+    SqlRunner.run(sql)
   end
 
 end
