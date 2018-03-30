@@ -6,11 +6,11 @@ class Animal
   attr_accessor :name, :breed, :status, :owner_id, :admission_date
 
   def initialize(options)
-    @id = options['id']
+    @id = options['id'].to_i if options['id']
     @name = options['name']
     @breed = options['breed']
     @status = options['status']
-    @owner_id = options['owner_id']
+    @owner_id = options['owner_id'].to_i if options['owner_id']
     @admission_date = options['admission_date']
   end
 
