@@ -28,8 +28,8 @@ They are looking for a management system to keep track of their animals and owne
 # Phase 1:
 - Owner Class model [DONE]
 - Animal Class model [DONE]
-- CRUDE for Owner class
-- CRUDE for Animal class
+- CRUDE for Owner class [DONE]
+- CRUDE for Animal class [DONE]
 
 # Phase 2:
 - Set up seeds.rb

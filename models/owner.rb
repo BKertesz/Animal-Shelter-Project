@@ -18,7 +18,9 @@ class Owner
   end
 
   def update()
-    
+    sql = "UPDATE owners SET name = $1 WHERE id=$2"
+    values = [@name,@id]
+    SqlRunner.run(sql,values)
   end
 
   def self.delete_by_id(id)
