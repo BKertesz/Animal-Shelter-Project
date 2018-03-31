@@ -4,8 +4,7 @@ DROP TABLE owners;
 
 CREATE TABLE owners(
   id SERIAL8 PRIMARY KEY,
-  name VARCHAR(255),
-  /* notes TEXT */
+  name VARCHAR(255)
 );
 
 
@@ -15,7 +14,6 @@ CREATE TABLE animals(
   breed VARCHAR(255),
   status VARCHAR(255),
   admission_date VARCHAR(255),
-  /* description TEXT, */
   owner_id INT REFERENCES owners(id)
   );
 
