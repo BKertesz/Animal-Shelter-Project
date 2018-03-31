@@ -33,10 +33,10 @@ They are looking for a management system to keep track of their animals and owne
 
 # Phase 2:
 - Set up seeds.rb [DONE]
-- Set up app.rb
-- :layout.erb
-- :index.erb
-- Create public/styles.css
+- Set up app.rb [DONE]
+- :layout.erb [DONE]
+- :index.erb [DONE]
+- Create public/styles.css[DONE]
 
 # Phase 3:
 # Owner
