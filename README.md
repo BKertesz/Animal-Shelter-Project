@@ -32,7 +32,7 @@ They are looking for a management system to keep track of their animals and owne
 - CRUDE for Animal class [DONE]
 
 # Phase 2:
-- Set up seeds.rb
+- Set up seeds.rb [DONE]
 - Set up app.rb
 - :layout.erb
 - :index.erb
