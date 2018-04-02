@@ -19,13 +19,13 @@ end
 
 get '/animals/:id' do
   @animal = Animal.find_by_id(params['id'].to_i)
-  erb(:'owners/show')
+  erb(:'animals/show')
 end
 
 get '/animals/:id/edit' do
   @animal = Animal.find_by_id(params['id'].to_i)
   @animal.update
-  erb(:'owners/edit')
+  erb(:'animals/edit')
 end
 
 post '/animals:id' do
