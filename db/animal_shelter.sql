@@ -14,7 +14,8 @@ CREATE TABLE animals(
   breed VARCHAR(255),
   status VARCHAR(255),
   admission_date VARCHAR(255),
-  owner_id INT REFERENCES owners(id)
+  owner_id INT REFERENCES owners(id),
+  age INT
   );
 
 /* EOF */
