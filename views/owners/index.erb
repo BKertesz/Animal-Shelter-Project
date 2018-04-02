@@ -2,8 +2,13 @@
 <h2>List of Registered Owners</h2>
 <hr/>
 <% @owners.each do |x| %>
-<p><a href='/owners/<%= x.id %>'>Name: <%=x.name %></a> </p>
-<!-- <p><a href='/owners/<%= x.id %>/edit'>Edit</a></p> -->
+<p>Name: <a href='/owners/<%= x.id %>'><%=x.name %></a> </p>
+<p>List of Pets:</p>
+<ul>
+<% x.animals().each do |pet| %>
+<li><a href='/animals/<%= pet.id%>'><%= pet.name %></a></li>
+<% end %>
+</ul>
 <form method='get' action='/owners/<%= x.id %>/edit'>
   <input type='submit' value='Edit'>
 </form>

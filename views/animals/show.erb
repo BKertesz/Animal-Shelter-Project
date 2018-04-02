@@ -1,0 +1,12 @@
+<p> Name: <%= @animal.name%> </p>
+<p> Species: <%= @animal.breed %> </p>
+<p> Age: <%= @animal.age %></p>
+<p> Status: <%= @animal.status %> </p>
+<p> Owner: <%= @animal.owner().name %> </p>
+<p> Admission Date: <%= @animal.admission_date %> </p>
+<form method='get' action='/animals/<%= @animal.id %>/edit'>
+  <input type='submit' value='Edit'>
+</form>
+<form method='post' action='/animals/<%= @animal.id %>/delete'>
+  <input type="submit" value='Delete'>
+</form>
