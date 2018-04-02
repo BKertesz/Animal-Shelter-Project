@@ -37,8 +37,6 @@ end
 
 post '/owners/:id/delete' do
   Owner.delete_by_id(params['id'])
-  # owner = Owner.new(params)
-  # owner.delete
   redirect to ('/owners')
 end
 # eof
