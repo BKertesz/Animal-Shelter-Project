@@ -40,9 +40,9 @@ They are looking for a management system to keep track of their animals and owne
 
 # Phase 3:
 # Owner
-- :index
+- :index[DONE]
 - :show
-- :new
+- :new[DONE]
 - :create
 - :edit
 - :update
