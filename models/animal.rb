@@ -37,7 +37,7 @@ class Animal
   end
 
   def self.delete_by_id(id)
-    sql = "DELETE * FROM animals WHERE id=$1"
+    sql = "DELETE FROM animals WHERE id=$1"
     values = [id]
     SqlRunner.run(sql,values)
   end

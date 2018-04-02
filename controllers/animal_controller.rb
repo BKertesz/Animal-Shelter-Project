@@ -25,18 +25,19 @@ get '/animals/:id' do
 end
 
 get '/animals/:id/edit' do
+  @owners = Owner.all
   @animal = Animal.find_by_id(params['id'].to_i)
   @animal.update
   erb(:'animals/edit')
 end
 
-post '/animals:id' do
+post '/animals/:id' do
   animal = Animal.new(params)
   animal.update
-  redirect to ('/owners')
+  redirect to ('/animals')
 end
 
 post '/animals/:id/delete' do
-  Animal.delete_by_id(params['id'])
+  Animal.delete_by_id(params['id'].to_i)
   redirect to ('/animals')
 end

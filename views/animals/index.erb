@@ -6,9 +6,7 @@
 <% @animals.each do |animal| %>
 <p> Name: <%= animal.name%> </p>
 <p> Species: <%= animal.breed %> </p>
-<p> Age: <%= animal.age %></p>
-<p> Status: <%= animal.status %> </p>
-<p> Owner: <%= animal.owner().name %> </p>
-<p> Admission Date: <%= animal.admission_date %> </p>
+<p> Location: <%= animal.owner().name %> </p>
+<p><a href="/animals/<%= animal.id %>">Details</a></p>
 <hr/>
 <% end %>

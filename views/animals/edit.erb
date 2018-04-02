@@ -1,0 +1,29 @@
+<h1>Edit <%= @animal.name %>
+<h4>
+<form method="post" action='/animals/<%= @animal.id %>'>
+  <label>Name:</label>
+  <input type='text' name='name' value='<%=@animal.name%>'>
+
+  <label>Breed:</label>
+  <input type="text" name='breed' value='<%=@animal.breed%>'>
+
+  <label>Age:</label>
+  <input type="number" name='age' value='<%=@animal.age%>'>
+
+  <label>Status:</label>
+  <input type='text' name='status' value='<%=@animal.status%>'>
+
+  <label>Location/Owner:</label>
+  <select name='owner_id'>
+    <% @owners.each do |owner| %>
+    <option value='<%=owner.id%>'><%=owner.name%></option>
+    <% end %>
+  </select>
+
+  <label>Admission Date:</label>
+  <input type='datetime-local' name='admission_date' value="<%= @animal.admission_date %>">
+
+  <input type='submit' value='Add'>
+
+</form>
+</h4>

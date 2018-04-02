@@ -1,3 +1,5 @@
+<hr/>
+<h1>Details of <%= @animal.name%></h1>
 <p> Name: <%= @animal.name%> </p>
 <p> Species: <%= @animal.breed %> </p>
 <p> Age: <%= @animal.age %></p>
@@ -10,3 +12,4 @@
 <form method='post' action='/animals/<%= @animal.id %>/delete'>
   <input type="submit" value='Delete'>
 </form>
+<hr/>

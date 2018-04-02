@@ -51,12 +51,12 @@ They are looking for a management system to keep track of their animals and owne
 # Phase 4:
 # Animal
 - :index [DONE]
-- :show
-- :new
-- :create
-- :edit
-- :update
-- :destroy
+- :show [DONE]
+- :new [DONE]
+- :create [DONE]
+- :edit [DONE]
+- :update [DONE]
+- :destroy [DONE]
 
 # Phase 5
 - Search options
