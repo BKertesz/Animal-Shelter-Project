@@ -16,4 +16,22 @@ post '/owners' do
   owner.save
   redirect to '/owners'
 end
+
+
+get '/owners/:id' do
+  @owner = Owner.find_by_id(params['id'].to_i)
+  erb(:'owners/show')
+end
+
+get '/owners/:id/edit' do
+  @owner = Owner.find_by_id(params['id'].to_i)
+  @owner.update
+  erb(:'owners/edit')
+end
+
+post '/owners/:id' do
+  owner = Owner.new(params)
+  owner.update
+  redirect to '/owners'
+end
 # eof

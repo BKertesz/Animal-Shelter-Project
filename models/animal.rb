@@ -42,7 +42,7 @@ class Animal
   def self.find_by_id(id)
     sql = 'SELECT * FROM animals WHERE id=$1'
     values = [id]
-    result = SqlRunner.run(sql)
+    result = SqlRunner.run(sql,values)
     return Animal.new(result.first)
   end
 
