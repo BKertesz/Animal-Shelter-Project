@@ -3,6 +3,13 @@
 <hr/>
 <% @owners.each do |x| %>
 <p><a href='/owners/<%= x.id %>'>Name: <%=x.name %></a> </p>
-<p><a href='/owners/<%= x.id %>/edit'>Edit</a></p>
+<!-- <p><a href='/owners/<%= x.id %>/edit'>Edit</a></p> -->
+<form method='get' action='/owners/<%= x.id %>/edit'>
+  <input type='submit' value='Edit'>
+</form>
+<!-- <p><a href='/owners/<%= x.id %>/delete'>Delete</a></p> -->
+<form method='post' action='/owners/<%= x.id %>/delete'>
+  <input type="submit" value='Delete'>
+</form>
 <hr/>
 <% end %>

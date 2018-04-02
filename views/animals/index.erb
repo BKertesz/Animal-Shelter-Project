@@ -1,1 +1,10 @@
 <h1>Animals</h1>
+<hr/>
+<% @animals.each do |animal| %>
+<p> Name: <%= animal.name%> </p>
+<p> Species: <%= animal.breed %> </p>
+<p> Status: <%= animal.status %> </p>
+<p> Owner: <%= animal.owner_id %> </p>
+<p> Admission Date: <%= animal.admission_date %> </p>
+
+<% end %>

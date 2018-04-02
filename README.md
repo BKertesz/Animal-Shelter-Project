@@ -46,11 +46,11 @@ They are looking for a management system to keep track of their animals and owne
 - :create[DONE]
 - :edit [DONE]
 - :update [DONE]
-- :destroy
+- :destroy [DONE]
 
 # Phase 4:
 # Animal
-- :index
+- :index [DONE]
 - :show
 - :new
 - :create
