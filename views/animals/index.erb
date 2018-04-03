@@ -2,14 +2,13 @@
   <input type='submit' value='Add New'>
 </form>
 
-<div id='index'>
 <h1>Animals</h1>
-<hr/>
-<% @animals.each do |animal| %>
-<p> Name: <%= animal.name%> </p>
-<p> Species: <%= animal.breed %> </p>
-<p> Location: <%= animal.owner().name %> </p>
-<p><a href="/animals/<%= animal.id %>">Details</a></p>
-<hr/>
-<% end %>
-</div>
+
+  <% @animals.each do |animal| %>
+    <div id='animal-list'>
+    <p> Name: <%= animal.name%> </p>
+    <p> Species: <%= animal.breed %> </p>
+    <p> Location: <%= animal.owner().name %> </p>
+    <p><a href="/animals/<%= animal.id %>">Details</a></p>
+    </div>
+  <% end %>
