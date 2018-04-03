@@ -1,11 +1,10 @@
-#new-animal{
+/* #new-animal{
   font-size: 20px;
   display: flex;
-  height: 300px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
+} */
 #menu {
   display: flex;
   flex-direction: row;

@@ -4,24 +4,25 @@ require_relative("animal")
 class Owner
 
   attr_reader :id
-  attr_accessor :name, :notes
+  attr_accessor :name, :notes, :phone_number
 
   def initialize(options)
     @name = options['name']
     @id = options['id'].to_i if options['id']
     @notes = options['notes']
+    @phone_number = options['phone_number']
   end
 
   def save()
-    sql = "INSERT INTO owners (name,notes) VALUES ($1,$2) RETURNING id;"
-    values = [@name,@notes]
+    sql = "INSERT INTO owners (name,notes,phone_number) VALUES ($1,$2,$3) RETURNING id;"
+    values = [@name,@notes,@phone_number]
     result = SqlRunner.run(sql,values)
     @id = result.first()['id'].to_i
   end
 
   def update()
-    sql = "UPDATE owners SET name = $1,notes=$2 WHERE id=$3"
-    values = [@name,@notes,@id]
+    sql = "UPDATE owners SET name = $1,notes=$2,phone_number=$4 WHERE id=$3"
+    values = [@name,@notes,@id,@phone_number]
     SqlRunner.run(sql,values)
   end
 

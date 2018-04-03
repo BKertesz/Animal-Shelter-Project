@@ -5,7 +5,8 @@ DROP TABLE owners;
 CREATE TABLE owners(
   id SERIAL8 PRIMARY KEY,
   name VARCHAR(255),
-  notes TEXT
+  notes TEXT,
+  phone_number VARCHAR(25)
 );
 
 
