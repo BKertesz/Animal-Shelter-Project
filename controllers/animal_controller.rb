@@ -5,7 +5,11 @@ require_relative('../models/owner')
 require('pry')
 
 get '/animals' do
-  @animals = Animal.all
+  if params['sort_by']
+    @animals = Animal.find_all_by(params['sort_by'])
+  else
+    @animals = Animal.all
+  end
   erb(:"animals/index")
 end
 

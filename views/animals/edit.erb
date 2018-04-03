@@ -18,8 +18,9 @@
 
   <label>Status:</label>
   <select name='status'>
-    <option value='Ready'>Ready</option>
-    <option value='Not Ready'>Not Ready</option>
+    <option value='<%= @animal.status %>'><%= @animal.status %></option>
+    <option value='Adoptable'>Ready</option>
+    <option value='Unadoptable'>Not Ready</option>
     <option value='In Training'>In Training</option>
     <option value='At Vet'>At Vet</option>
   </select>

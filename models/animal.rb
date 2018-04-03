@@ -70,4 +70,11 @@ class Animal
     return my_array
   end
 
+  def self.find_all_by(option)
+    sql = 'SELECT * FROM animals WHERE status=$1'
+    values = [option]
+    result = SqlRunner.run(sql,values)
+    return result.map{|x| Animal.new(x)}
+  end
+
 end
