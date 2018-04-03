@@ -1,0 +1,9 @@
+<h1>Results for <%= @search %></h1>
+<% if @list.length == 0 %>
+<h3>No Results...</h3>
+<% end %>
+<ul>
+<% @list.each do |x| %>
+<li><a href='/animals/<%= x.id %>'><%= x.name %></a></li>
+<% end %>
+</ul>

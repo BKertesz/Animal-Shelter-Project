@@ -59,7 +59,7 @@ They are looking for a management system to keep track of their animals and owne
 - :destroy [DONE]
 
 # Phase 5
-- Search options
+- Search options [DONE]
 - Css design
 - Abillity to add picture
 

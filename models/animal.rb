@@ -62,4 +62,12 @@ class Animal
     SqlRunner.run(sql)
   end
 
+  def self.find_by_name(name)
+    sql = 'SELECT * FROM animals WHERE name=$1'
+    values = [name]
+    result = SqlRunner.run(sql,values)
+    my_array = result.map{|x| Animal.new(x)}
+    return my_array
+  end
+
 end
