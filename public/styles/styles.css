@@ -21,6 +21,7 @@ span{
   align-items: center;
 }
 #animal-list{
-  border: thin solid red;
+  border: 5px dotted black;
   margin: 10px;
+  padding: 10px;
 }

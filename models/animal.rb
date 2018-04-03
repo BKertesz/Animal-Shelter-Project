@@ -3,7 +3,7 @@ require_relative("../db/sql_runner.rb")
 class Animal
 
   attr_reader :id
-  attr_accessor :name, :breed, :status, :owner_id, :admission_date, :age
+  attr_accessor :name, :breed, :status, :owner_id, :admission_date, :age, :gender, :description
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
@@ -13,18 +13,20 @@ class Animal
     @status = options['status']
     @owner_id = options['owner_id'].to_i if options['owner_id']
     @admission_date = options['admission_date']
+    @description = options['description']
+    @gender = options['gender']
   end
 
   def save()
-    sql = "INSERT INTO animals (name,breed,age,status,owner_id,admission_date) VALUES ($1,$2,$3,$4,$5,$6) RETURNING id;"
-    values = [@name,@breed,@age,@status,@owner_id,@admission_date]
+    sql = "INSERT INTO animals (name,breed,age,status,owner_id,admission_date,description,gender) VALUES ($1,$2,$3,$4,$5,$6,$7,$8) RETURNING id;"
+    values = [@name,@breed,@age,@status,@owner_id,@admission_date,@description,@gender]
     result = SqlRunner.run(sql,values)
     @id = result.first()['id'].to_i
   end
 
   def update()
-    sql = "UPDATE animals SET name=$1, breed=$2, status=$3, owner_id=$4, admission_date=$5, age=$7 WHERE id=$6"
-    values = [@name,@breed,@status,@owner_id,@admission_date,@id,@age]
+    sql = "UPDATE animals SET name=$1, breed=$2, status=$3, owner_id=$4, admission_date=$5, age=$7, description=$8, gender=$9 WHERE id=$6"
+    values = [@name,@breed,@status,@owner_id,@admission_date,@id,@age,@description,@gender]
     SqlRunner.run(sql,values)
   end
 

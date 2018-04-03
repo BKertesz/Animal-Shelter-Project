@@ -3,9 +3,12 @@
 <p> Name: <%= @animal.name%> </p>
 <p> Species: <%= @animal.breed %> </p>
 <p> Age: <%= @animal.age %></p>
+<p> Gender:<%= @animal.gender %></p>
 <p> Status: <%= @animal.status %> </p>
 <p> Owner: <%= @animal.owner().name %> </p>
 <p> Admission Date: <%= @animal.admission_date %> </p>
+<p> Description:</p>
+<p><%= @animal.description %> </p>
 <form method='get' action='/animals/<%= @animal.id %>/edit'>
   <input type='submit' value='Edit'>
 </form>

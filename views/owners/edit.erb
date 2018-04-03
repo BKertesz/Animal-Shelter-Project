@@ -1,6 +1,8 @@
 <h1>Edit <%= @owner.name %></h1>
 <form method='post' action='/owners/<%= @owner.id%>'>
 <label for='change-name'>Change Name:</label>
-<input id='change-name' name='name' type='text' value='<%= @owner.name %>'>
+<input id='change-name' name='name' type='text' value='<%= @owner.name %>' size='30'><br/>
+<label for'change-notes'>Update Notes:</label><br/>
+<input id='change-notes' name='notes' type="text" value='<%= @owner.notes %>' size='60' >
 <input type='submit' value='Update'>
 </form>
