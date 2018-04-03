@@ -1,6 +1,8 @@
 <form method='get' action='/animals/new'>
   <input type='submit' value='Add New'>
 </form>
+
+<div id='index'>
 <h1>Animals</h1>
 <hr/>
 <% @animals.each do |animal| %>
@@ -10,3 +12,4 @@
 <p><a href="/animals/<%= animal.id %>">Details</a></p>
 <hr/>
 <% end %>
+</div>

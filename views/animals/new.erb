@@ -1,5 +1,5 @@
 <h2>Register New Animals</h2>
-<form method="post" action='/animals'>
+<form id='new-animal' method="post" action='/animals'>
   <label>Name:</label>
   <input type='text' name='name'>
 
@@ -10,7 +10,12 @@
   <input type="number" name='age'>
 
   <label>Status:</label>
-  <input type='text' name='status'>
+  <select name='status'>
+    <option value='Ready'>Ready</option>
+    <option value='Not Ready'>Not Ready</option>
+    <option value='In Training'>In Training</option>
+    <option value='At Vet'>At Vet</option>
+  </select>
 
   <label>Location/Owner:</label>
   <select name='owner_id'>

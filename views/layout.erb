@@ -4,16 +4,17 @@
   <head>
     <meta charset="utf-8">
     <title>Animal Shelter</title>
+    <link rel='stylesheet' type='text/css' href="/styles/styles.css">
   </head>
 
   <body>
     <nav>
-      <ul>
-        <li><a href='/'>Home</a></li>
-        <li><a href='/'>About Us</a></li>
-        <li><a href='/'>Donation</a></li>
-        <li><a href='/'>Voluntering</a></li>
-        <ul>
+      <div id='menu'>
+      <span><a href='/'>Home</a></span>
+      <span><a href='/'>About Us</a></span>
+      <span><a href='/animals'>Animals</a></span>
+    <span><a href='/owners'>Owners</a></span>
+  </div>
     </nav>
     <%= yield %>
   </body>
