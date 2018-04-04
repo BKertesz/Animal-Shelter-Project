@@ -25,15 +25,18 @@
     <option value='At Vet'>At Vet</option>
   </select>
 
+  <label>Picture:</label>
+  <input type='text' name='image' value='<%= @animal.image %>'>
+
   <label>Location</label>
   <input type="text" value='<%= @animal.location %>' name='location'>
 
-  <label>Owner:</label>
+  <!-- <label>Owner:</label>
   <select name='owner_id'>
     <% @owners.each do |owner| %>
     <option value='<%=owner.id%>'><%=owner.name%></option>
     <% end %>
-  </select>
+  </select> -->
 
   <label>Admission Date:</label>
   <input type='date' name='admission_date' value="<%= @animal.admission_date %>">
@@ -41,7 +44,7 @@
   <label>Description:</label><br/>
   <input type='text' name='description' value='<%= @animal.description %>'>
 
-  <input type='submit' value='Add'>
+  <input type='submit' value='Edit'>
 
 </form>
 </h4>

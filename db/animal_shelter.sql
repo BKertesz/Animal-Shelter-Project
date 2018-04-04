@@ -19,7 +19,8 @@ CREATE TABLE animals(
   age INT,
   description TEXT,
   gender VARCHAR(255),
-  location VARCHAR(255)
+  location VARCHAR(255),
+  image VARCHAR(255)
 );
 
 /* EOF */

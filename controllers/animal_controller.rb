@@ -26,14 +26,15 @@ end
 
 get '/animals/adopt' do
   @owners = Owner.all
-  @animals = Animal.all
+  @animals = Animal.find_all_by('Adoptable')
   erb(:'animals/adopt')
 end
 
 post '/animals/adopt' do
   animal = Animal.find_by_id(params['id'])
   animal.owner_id = params['owner_id']
-  animal.location = 'Adopted'
+  animal.location = 'Owner'
+  animal.status = 'Adopted'
   animal.update
   redirect to '/animals'
 end
