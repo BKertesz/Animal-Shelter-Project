@@ -1,13 +1,16 @@
 <!-- <form method='get' action='/animals/new'>
   <input type='submit' value='Add New'> -->
-</form>
+<!-- </form> -->
+<div class='index-bars'>
+  
 <form method='get' action='/animals/search'>
-  <input type='text' name='name' placeholder="Search...">
-  <input type='submit' value='Go'>
+  <input  type='text' name='name' placeholder="Search...">
+  <input  type='submit' value='Go'>
 </form>
-<form method='get' action='/animals'>
+
+<form class='index-bars' method='get' action='/animals'>
 <label>Sort by:</label>
-<select name='sort_by'>
+<select class='index-bars' name='sort_by'>
   <option value='Adoptable'>Ready For Adoptation</option>
   <option value='Unadoptable'>Not Ready For Adoptation</option>
   <option value='In Training'>In Training</option>
@@ -16,14 +19,17 @@
 </select>
 <input type='submit' value='Sort'>
 </form>
+</div>
 <h1>Animals</h1>
 
   <% @animals.each do |animal| %>
     <div id='animal-list'>
-      <img id='animal-picture' src='<%= animal.image %>'>
+      <img class='animal-picture' src='<%= animal.image %>'>
+      <div id='index-text'>
     <p> Name: <%= animal.name%> </p>
     <p> Species: <%= animal.breed %> </p>
     <p> Location: <%= animal.location %> </p>
     <p><a href="/animals/<%= animal.id %>">Details</a></p>
+  </div>
     </div>
   <% end %>

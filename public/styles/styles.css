@@ -1,15 +1,18 @@
 body{
-  font-style: Verdana;
+  font-family: Verdana;
+  background-color: #666;
 }
 #menu {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin:20px;
+  margin-bottom: 30px;
+  font-size: 30px;
 }
 
 span{
   padding-right: 15px;
-  font-size: 20px;
 }
 
 #index{
@@ -19,11 +22,79 @@ span{
 }
 
 #animal-list{
+  display: inline-flex;
+  font-weight: bold;
   border: 5px dotted black;
   margin: 10px;
-  padding: 10px;
+  padding: 20px;
+  line-height: 10px;
 }
-#animal-picture{
+
+.animal-picture{
+  align-items: flex-start;
   width:160px;
   height: 160px;
+  border: 5px dotted black;
 }
+
+#index-text p{
+  padding: 10px;
+  margin: 10px;
+ align-items: flex-end;
+}
+
+.index-bars{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.index-bars form input {
+  padding: 10px;
+  background: snow;
+  font-size: 15px;
+}
+.index-bars form select{
+  padding:10px;
+  background:snow;
+  font-size: 15px;
+}
+.index-bars label{
+  padding: 10px;
+  font-size: 15px;
+}
+#new-animal{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#new-animal label{
+
+  font-size: 25px;
+  line-height: 40px;
+}
+#new-animal input{
+  font-size: 15px;
+}
+
+#new-animal #button{
+  font-size: 20px;
+  background-color: snow;
+  margin:20px;
+  padding: 20px;
+}
+
+#owner-index{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 5px dotted black;
+  font-size: 20px;
+  line-height: 15px;
+}
+
+#owner-index #button{
+  flex-direction: row;
+}
+
+/* EOF */
