@@ -9,7 +9,6 @@ CREATE TABLE owners(
   phone_number VARCHAR(25)
 );
 
-
 CREATE TABLE animals(
   id SERIAL8 PRIMARY KEY,
   name VARCHAR(255),
