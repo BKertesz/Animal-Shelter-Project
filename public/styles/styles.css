@@ -1,10 +1,6 @@
-/* #new-animal{
-  font-size: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-} */
+body{
+  font-style: Verdana;
+}
 #menu {
   display: flex;
   flex-direction: row;
