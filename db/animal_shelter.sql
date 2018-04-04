@@ -18,7 +18,8 @@ CREATE TABLE animals(
   owner_id INT REFERENCES owners(id),
   age INT,
   description TEXT,
-  gender VARCHAR(255)
+  gender VARCHAR(255),
+  location VARCHAR(255)
 );
 
 /* EOF */

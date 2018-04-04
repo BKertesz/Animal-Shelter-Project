@@ -1,0 +1,21 @@
+<h1>Adopt Form</h1>
+
+<form method='post' action='/animals/adopt'>
+  <label>Animal to Adopt:</label><br/>
+  <select name='id'>
+    <% @animals.each do |pet| %>
+    <option value='<%=pet.id%>'><%= pet.name %></option>
+    <% end  %>
+  </select>
+  <hr/>
+  <label>Person who Adopts:</label><br/>
+  <select name='owner_id'>
+    <% @owners.each do |person| %>
+    <option value='<%=person.id%>'><%= person.name %></option>
+    <% end %>
+  </label>
+  <br/>
+
+  <input type="submit" value='Go'>
+
+</form>

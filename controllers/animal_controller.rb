@@ -24,6 +24,19 @@ post '/animals' do
   redirect to '/animals'
 end
 
+get '/animals/adopt' do
+  @owners = Owner.all
+  @animals = Animal.all
+  erb(:'animals/adopt')
+end
+
+post '/animals/adopt' do
+  animal = Animal.find_by_id(params['id'])
+  animal.owner_id = params['owner_id']
+  animal.update
+  redirect to '/animals'
+end
+
 get '/animals/search' do
   @search = params['name']
   @list = Animal.find_by_name(params['name'])
@@ -52,6 +65,10 @@ post '/animals/:id/delete' do
   Animal.delete_by_id(params['id'].to_i)
   redirect to ('/animals')
 end
+
+
+
+
 
 
 # EOF

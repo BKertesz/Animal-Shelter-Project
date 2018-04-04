@@ -23,7 +23,10 @@
     <option value='At Vet'>At Vet</option>
   </select>
 
-  <label>Location/Owner:</label>
+  <label>Location:</label>
+  <input type="text" name='location'>
+
+  <label>Owner:</label>
   <select name='owner_id'>
     <% @owners.each do |owner| %>
     <option value='<%=owner.id%>'><%=owner.name%></option>
