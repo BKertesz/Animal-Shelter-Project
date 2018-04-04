@@ -32,11 +32,13 @@ class Animal
   end
 
   def owner()
+    return '' if !@owner_id
     sql = "SELECT * FROM owners WHERE id=$1"
     values = [@owner_id]
     result = SqlRunner.run(sql,values)
-    owner = result.map{|x| Owner.new(x)}
-    return owner.first
+    my_array = result.map{|x| Owner.new(x)}
+    owner =  my_array.first
+    return owner.name
   end
 
   def self.delete_by_id(id)

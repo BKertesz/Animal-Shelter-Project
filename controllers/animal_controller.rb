@@ -33,7 +33,7 @@ end
 post '/animals/adopt' do
   animal = Animal.find_by_id(params['id'])
   animal.owner_id = params['owner_id']
-  animal.location = ''
+  animal.location = 'Adopted'
   animal.update
   redirect to '/animals'
 end
