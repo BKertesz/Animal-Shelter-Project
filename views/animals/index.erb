@@ -2,7 +2,7 @@
   <input type='submit' value='Add New'> -->
 <!-- </form> -->
 <div class='index-bars'>
-  
+
 <form method='get' action='/animals/search'>
   <input  type='text' name='name' placeholder="Search...">
   <input  type='submit' value='Go'>
@@ -23,9 +23,9 @@
 <h1>Animals</h1>
 
   <% @animals.each do |animal| %>
-    <div id='animal-list'>
+    <div class='animal-list'>
       <img class='animal-picture' src='<%= animal.image %>'>
-      <div id='index-text'>
+      <div class='index-text'>
     <p> Name: <%= animal.name%> </p>
     <p> Species: <%= animal.breed %> </p>
     <p> Location: <%= animal.location %> </p>

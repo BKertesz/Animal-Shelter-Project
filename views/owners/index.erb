@@ -1,9 +1,8 @@
 
-<p><a href='/owners/new'>Register New Owner</a></p>
-<h2>List of Registered Owners</h2>
-<hr/>
-<div id='owner-index'>
+<h1>List of Registered Owners</h1>
+
 <% @owners.each do |x| %>
+<div class='owner-index'>
 <p>Name: <a href='/owners/<%= x.id %>'><%=x.name %></a> </p>
 <p>List of Pets:</p>
 <ul>
@@ -11,12 +10,14 @@
 <li><a href='/animals/<%= pet.id%>'><%= pet.name %></a></li>
 <% end %>
 </ul>
-<form id='button' method='get' action='/owners/<%= x.id %>/edit'>
+<div class='buttons'>
+<form method='get' action='/owners/<%= x.id %>/edit'>
   <input type='submit' value='Edit'>
 </form>
-<form id='button' method='post' action='/owners/<%= x.id %>/delete'>
+<form method='post' action='/owners/<%= x.id %>/delete'>
   <input type="submit" value='Delete'>
 </form>
-<hr/>
-<% end %>
 </div>
+<hr/>
+</div>
+<% end %>
