@@ -11,10 +11,12 @@
 <p> Admission Date: <%= @animal.admission_date %> </p>
 <p> Description:</p>
 <p><%= @animal.description %> </p>
+<div class='buttons'>
 <form method='get' action='/animals/<%= @animal.id %>/edit'>
   <input type='submit' value='Edit'>
 </form>
 <form method='post' action='/animals/<%= @animal.id %>/delete'>
   <input type="submit" value='Delete'>
 </form>
+</div>
 </div>
