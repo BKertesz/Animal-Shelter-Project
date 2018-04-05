@@ -40,7 +40,7 @@ body{
 .index-text p{
   padding: 10px;
   margin: 10px;
- align-items: flex-end;
+  align-items: flex-end;
 }
 
 .index-bars{
@@ -63,21 +63,21 @@ body{
   padding: 10px;
   font-size: 15px;
 }
-#new-animal{
+.new-animal{
   display: flex;
   align-items: center;
   flex-direction: column;
 }
-#new-animal label{
+.new-animal label{
 
   font-size: 25px;
   line-height: 40px;
 }
-#new-animal input{
+.new-animal input{
   font-size: 15px;
 }
 
-#new-animal #button{
+.new-animal .button{
   font-size: 20px;
   background-color: snow;
   margin:20px;

@@ -3,20 +3,20 @@
 
 <% @owners.each do |x| %>
 <div class='owner-index'>
-<p>Name: <a href='/owners/<%= x.id %>'><%=x.name %></a> </p>
-<p>List of Pets:</p>
-<ul>
-<% x.animals().each do |pet| %>
-<li><a href='/animals/<%= pet.id%>'><%= pet.name %></a></li>
-<% end %>
+  <p>Name: <a href='/owners/<%= x.id %>'><%=x.name %></a> </p>
+  <p>List of Pets:</p>
+  <ul>
+  <% x.animals().each do |pet| %>
+  <li><a href='/animals/<%= pet.id%>'><%= pet.name %></a></li>
+  <% end %>
 </ul>
 <div class='buttons'>
-<form method='get' action='/owners/<%= x.id %>/edit'>
-  <input type='submit' value='Edit'>
-</form>
-<form method='post' action='/owners/<%= x.id %>/delete'>
-  <input type="submit" value='Delete'>
-</form>
+  <form method='get' action='/owners/<%= x.id %>/edit'>
+    <input type='submit' value='Edit'>
+  </form>
+  <form method='post' action='/owners/<%= x.id %>/delete'>
+    <input type="submit" value='Delete'>
+  </form>
 </div>
 <hr/>
 </div>

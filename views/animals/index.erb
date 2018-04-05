@@ -1,35 +1,35 @@
 <!-- <form method='get' action='/animals/new'>
-  <input type='submit' value='Add New'> -->
+<input type='submit' value='Add New'> -->
 <!-- </form> -->
 <div class='index-bars'>
 
-<form method='get' action='/animals/search'>
-  <input  type='text' name='name' placeholder="Search...">
-  <input  type='submit' value='Go'>
-</form>
+  <form method='get' action='/animals/search'>
+    <input  type='text' name='name' placeholder="Search...">
+    <input  type='submit' value='Go'>
+  </form>
 
-<form class='index-bars' method='get' action='/animals'>
-<label>Sort by:</label>
-<select class='index-bars' name='sort_by'>
-  <option value='Adoptable'>Ready For Adoptation</option>
-  <option value='Unadoptable'>Not Ready For Adoptation</option>
-  <option value='In Training'>In Training</option>
-  <option value='At Vet'>At Vet</option>
-  <option value='Adopted'>Adopted</option>
-</select>
-<input type='submit' value='Sort'>
-</form>
+  <form class='index-bars' method='get' action='/animals'>
+    <label>Sort by:</label>
+    <select class='index-bars' name='sort_by'>
+      <option value='Adoptable'>Ready For Adoptation</option>
+      <option value='Unadoptable'>Not Ready For Adoptation</option>
+      <option value='In Training'>In Training</option>
+      <option value='At Vet'>At Vet</option>
+      <option value='Adopted'>Adopted</option>
+    </select>
+    <input type='submit' value='Sort'>
+  </form>
 </div>
 <h1>Animals</h1>
 
-  <% @animals.each do |animal| %>
-    <div class='animal-list'>
-      <img class='animal-picture' src='<%= animal.image %>'>
-      <div class='index-text'>
+<% @animals.each do |animal| %>
+<div class='animal-list'>
+  <img class='animal-picture' src='<%= animal.image %>'>
+  <div class='index-text'>
     <p> Name: <%= animal.name%> </p>
     <p> Species: <%= animal.breed %> </p>
     <p> Location: <%= animal.location %> </p>
     <p><a href="/animals/<%= animal.id %>">Details</a></p>
   </div>
-    </div>
-  <% end %>
+</div>
+<% end %>

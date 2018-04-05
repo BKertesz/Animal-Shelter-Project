@@ -1,14 +1,16 @@
 <h1>Register New Owner</h1>
+<div class='new-animal'>
 <form action='/owners' method='post'>
   <label for='owner-name'>Name:</label>
-    <input id='owner-name' name='name' type='text'><br/>
+  <input id='owner-name' name='name' type='text'><br/>
 
-    <label for='owner-phone-number'>Phone Number:</label>
-    <input id='owner-phone-number' type='tel' name='phone_number'><br/>
+  <label for='owner-phone-number'>Phone Number:</label>
+  <input id='owner-phone-number' type='tel' name='phone_number'><br/>
 
-    <label for='owner-notes'>Notes:</label><br/>
-    <input type='text' maxlength="65000" name='notes' size='80'>
-    <br/>
+  <label for='owner-notes'>Notes:</label><br/>
+  <input type='text' maxlength="65000" name='notes' size='80'>
+  <br/>
 
-    <input type='submit' value='Add new'>
+  <input class='button' type='submit' value='Add new'>
 </form>
+</div>

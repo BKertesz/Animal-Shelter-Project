@@ -1,22 +1,22 @@
 <h1>Details of <%= @animal.name%></h1>
 <img class='animal-picture' src='<%= @animal.image %>'>
-<div class='animal-show'
-<p> Name: <%= @animal.name%> </p>
-<p> Species: <%= @animal.breed %> </p>
-<p> Age: <%= @animal.age %></p>
-<p> Gender:<%= @animal.gender %></p>
-<p> Status: <%= @animal.status %> </p>
-<p> Location: <%= @animal.location %> </p>
-<p> Owner: <%= @animal.owner() %> </p>
-<p> Admission Date: <%= @animal.admission_date %> </p>
-<p> Description:</p>
-<p><%= @animal.description %> </p>
-<div class='buttons'>
-<form method='get' action='/animals/<%= @animal.id %>/edit'>
-  <input type='submit' value='Edit'>
-</form>
-<form method='post' action='/animals/<%= @animal.id %>/delete'>
-  <input type="submit" value='Delete'>
-</form>
-</div>
+<div class='animal-show'>
+  <p> Name: <%= @animal.name%> </p>
+  <p> Species: <%= @animal.breed %> </p>
+  <p> Age: <%= @animal.age %></p>
+  <p> Gender:<%= @animal.gender %></p>
+  <p> Status: <%= @animal.status %> </p>
+  <p> Location: <%= @animal.location %> </p>
+  <p> Owner: <%= @animal.owner() %> </p>
+  <p> Admission Date: <%= @animal.admission_date %> </p>
+  <p> Description:</p>
+  <p><%= @animal.description %> </p>
+  <div class='buttons'>
+    <form method='get' action='/animals/<%= @animal.id %>/edit'>
+      <input type='submit' value='Edit'>
+    </form>
+    <form method='post' action='/animals/<%= @animal.id %>/delete'>
+      <input type="submit" value='Delete'>
+    </form>
+  </div>
 </div>

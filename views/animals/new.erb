@@ -1,5 +1,5 @@
 <h2>Register New Animals</h2>
-<form id='new-animal' method="post" action='/animals'>
+<form class='new-animal' method="post" action='/animals'>
   <label>Name:</label>
   <input type='text' name='name'>
 
@@ -31,17 +31,17 @@
 
   <!-- <label>Owner:</label>
   <select name='owner_id'>
-    <% @owners.each do |owner| %>
-    <option value='<%=owner.id%>'><%=owner.name%></option>
-    <% end %>
-  </select> -->
+  <% @owners.each do |owner| %>
+  <option value='<%=owner.id%>'><%=owner.name%></option>
+  <% end %>
+</select> -->
 
-  <label>Admission Date:</label>
-  <input type='date' name='admission_date'>
+<label>Admission Date:</label>
+<input type='date' name='admission_date'>
 
-  <label>Description:</label>
-  <input type='text' name='description' size='45'>
+<label>Description:</label>
+<input type='text' name='description' size='45'>
 
-  <input id='button' type='submit' value='Add'>
+<input class='button' type='submit' value='Add'>
 
 </form>

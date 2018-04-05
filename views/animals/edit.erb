@@ -1,50 +1,50 @@
 <h1>Edit <%= @animal.name %>
-<h4>
-<form id='new-animal' method="post" action='/animals/<%= @animal.id %>'>
-  <label>Name:</label>
-  <input type='text' name='name' value='<%=@animal.name%>'>
+  <h4>
+    <form id='new-animal' method="post" action='/animals/<%= @animal.id %>'>
+      <label>Name:</label>
+      <input type='text' name='name' value='<%=@animal.name%>'>
 
-  <label>Breed:</label>
-  <input type="text" name='breed' value='<%=@animal.breed%>'>
+      <label>Breed:</label>
+      <input type="text" name='breed' value='<%=@animal.breed%>'>
 
-  <label>Age:</label>
-  <input type="number" name='age' value='<%=@animal.age%>'>
+      <label>Age:</label>
+      <input type="number" name='age' value='<%=@animal.age%>'>
 
-  <label>Gender</label>
-  <select name='gender'>
-    <option value='Male'>Male</option>
-    <option value='Female'>Female</option>
-  </select>
+      <label>Gender</label>
+      <select name='gender'>
+        <option value='Male'>Male</option>
+        <option value='Female'>Female</option>
+      </select>
 
-  <label>Status:</label>
-  <select name='status'>
-    <option value='<%= @animal.status %>'><%= @animal.status %></option>
-    <option value='Adoptable'>Ready</option>
-    <option value='Unadoptable'>Not Ready</option>
-    <option value='In Training'>In Training</option>
-    <option value='At Vet'>At Vet</option>
-  </select>
+      <label>Status:</label>
+      <select name='status'>
+        <option value='<%= @animal.status %>'><%= @animal.status %></option>
+        <option value='Adoptable'>Ready</option>
+        <option value='Unadoptable'>Not Ready</option>
+        <option value='In Training'>In Training</option>
+        <option value='At Vet'>At Vet</option>
+      </select>
 
-  <label>Picture:</label>
-  <input type='text' name='image' value='<%= @animal.image %>'>
+      <label>Picture:</label>
+      <input type='text' name='image' value='<%= @animal.image %>'>
 
-  <label>Location</label>
-  <input type="text" value='<%= @animal.location %>' name='location'>
+      <label>Location</label>
+      <input type="text" value='<%= @animal.location %>' name='location'>
 
-  <!-- <label>Owner:</label>
-  <select name='owner_id'>
-    <% @owners.each do |owner| %>
-    <option value='<%=owner.id%>'><%=owner.name%></option>
-    <% end %>
-  </select> -->
+      <!-- <label>Owner:</label>
+      <select name='owner_id'>
+      <% @owners.each do |owner| %>
+      <option value='<%=owner.id%>'><%=owner.name%></option>
+      <% end %>
+    </select> -->
 
-  <label>Admission Date:</label>
-  <input type='date' name='admission_date' value="<%= @animal.admission_date %>">
+    <label>Admission Date:</label>
+    <input type='date' name='admission_date' value="<%= @animal.admission_date %>">
 
-  <label>Description:</label><br/>
-  <input type='text' name='description' value='<%= @animal.description %>'>
+    <label>Description:</label><br/>
+    <input type='text' name='description' value='<%= @animal.description %>'>
 
-  <input id='button' type='submit' value='Edit'>
+    <input id='button' type='submit' value='Edit'>
 
-</form>
+  </form>
 </h4>
