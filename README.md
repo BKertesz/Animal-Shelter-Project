@@ -60,7 +60,6 @@ They are looking for a management system to keep track of their animals and owne
 
 # Phase 5
 - Search options [DONE]
-- Css design
-- Abillity to add picture
+- Css design [DONE]
 
  <!-- EOF -->
